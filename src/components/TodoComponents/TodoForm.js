@@ -28,11 +28,11 @@ class TodoForm extends React.Component {
     render() {
         return (
             <>
-            <form onSubmit = {this.handleSubmit}>
-                <input type="text" name="task" placeholder="Add Task" value={this.state.task} onChange = {this.handleChange} />
-                <button onClick = {this.handleSubmit}>Add Todo</button>
+            <form className = "form" onSubmit = {this.handleSubmit}>
+                <input className = "formInput" type="text" name="task" placeholder="Add Task" value={this.state.task} onChange = {this.handleChange} />
+                <button className = "addButton" onClick = {this.handleSubmit}>Add Todo</button>
             </form>
-            <button onClick = {this.handleRemove}>Clear Completed</button>
+            <button className = "clearButton" onClick = {this.handleRemove}>Clear Completed</button>
             </>
         )
     }

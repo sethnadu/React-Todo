@@ -7,11 +7,11 @@ import Todo from "./Todo.js";
 function TodoList(props) {
 
     return (
-        <>
+        <div className = "taskDiv">
             {props.todoInfo.map(item => (
                 <Todo key={item.id} item ={item} toggleTodo = {props.toggleTodo} />
             ))}
-        </>
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import TodoList from "./components/TodoComponents/TodoList.js";
 import TodoForm from "./components/TodoComponents/TodoForm.js";
-import "./components/TodoComponents/Todo.css"
+import "./components/TodoComponents/Todo.scss"
 
 const todoListArray = [{
-      task: null,
+      task: "test",
       id: Date.now(),
       completed: false
 },]
@@ -61,8 +61,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className = "todo">
+        <h2 className = "mainTitle">Welcome to your Todo App!</h2>
         <TodoList todoInfo = {this.state.todoInfo} toggleTodo = {this.toggleTodo}/>
         <TodoForm addTask = {this.addTask} clearTasks = {this.clearTasks}/>
       </div>
