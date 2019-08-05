@@ -44,7 +44,7 @@ class TodoForm extends React.Component {
                 <input className = "formInput" type="text" name="task" placeholder="Add Task" value={this.state.task} onChange = {this.handleChange} />
                 <button className = "addButton" onClick = {this.handleSubmit}>Add Todo</button>
             </form>
-            <button className = "clearButton" onClick = {this.handleFind}>Search for Task</button>
+            <button className = "searchButton" onClick = {this.handleFind}>Search for Task</button>
             <button className = "clearButton" onClick = {this.handleRemove}>Clear Completed</button>
             
             </>

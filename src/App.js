@@ -81,7 +81,6 @@ class App extends React.Component {
   }
 
   clearTasks = () => {
-    console.log("hello")
     this.setState({
       todoInfo: this.state.todoInfo.filter(item => {
         return (!item.completed)})
