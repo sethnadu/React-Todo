@@ -4,7 +4,7 @@ import TodoForm from "./components/TodoComponents/TodoForm.js";
 import "./components/TodoComponents/Todo.css"
 
 const todoListArray = [{
-      task: "placeholder",
+      task: null,
       id: Date.now(),
       completed: false
 },]
@@ -50,9 +50,11 @@ class App extends React.Component {
   }
 
   clearTasks = () => {
+    console.log("hello")
     this.setState({
-      todoInfo: this.state.todoInfo.filter(item => !item.purchased)
-    })
+      todoInfo: this.state.todoInfo.filter(item => {
+        return (item === !item.completed)})
+    });
   }
 
 
@@ -62,7 +64,7 @@ class App extends React.Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
         <TodoList todoInfo = {this.state.todoInfo} toggleTodo = {this.toggleTodo}/>
-        <TodoForm addTask = {this.addTask}/>
+        <TodoForm addTask = {this.addTask} clearTasks = {this.clearTasks}/>
       </div>
     );
   }

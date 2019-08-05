@@ -20,7 +20,10 @@ class TodoForm extends React.Component {
    
     }
 
-
+    handleRemove = event => {
+        event.preventDefault();
+        this.props.clearTasks();
+    }
 
     render() {
         return (
@@ -29,7 +32,7 @@ class TodoForm extends React.Component {
                 <input type="text" name="task" placeholder="Add Task" value={this.state.task} onChange = {this.handleChange} />
                 <button onClick = {this.handleSubmit}>Add Todo</button>
             </form>
-            <button>Clear Todo List</button>
+            <button onClick = {this.handleRemove}>Clear Todo List</button>
             </>
         )
     }
