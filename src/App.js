@@ -46,6 +46,22 @@ class App extends React.Component {
     };
     this.setState({
       todoInfo: [...this.state.todoInfo, newTask]
+      
+    })
+    // window.localStorage.setItem(newTask.id, JSON.stringify(taskName));
+    //  return  window.localStorage.getItem(newTask.id) ? JSON.parse(window.localStorage.getItem(newTask.id)) : taskName;
+     
+  }
+
+  findTask = task => {
+    this.setState({
+      todoInfo: this.state.todoInfo.filter(item => {
+        if (item.task === task) {
+          return item.task
+        } else if (!task) {
+          return {...this.state.todoInfo}
+        }
+      }) 
     })
   }
 
@@ -64,7 +80,7 @@ class App extends React.Component {
       <div className = "todo">
         <h2 className = "mainTitle">Welcome to your Todo App!</h2>
         <TodoList todoInfo = {this.state.todoInfo} toggleTodo = {this.toggleTodo}/>
-        <TodoForm addTask = {this.addTask} clearTasks = {this.clearTasks}/>
+        <TodoForm addTask = {this.addTask} clearTasks = {this.clearTasks} findTask = {this.findTask}/>
       </div>
     );
   }
