@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoList from "./components/TodoComponents/TodoList.js";
 import TodoForm from "./components/TodoComponents/TodoForm.js";
-import { objectMethod } from '@babel/types';
+import "./components/TodoComponents/Todo.css"
 
 const todoListArray = [{
       task: "placeholder",
@@ -42,10 +42,16 @@ class App extends React.Component {
     const newTask = {
       task: taskName,
       id: Date.now(),
-      purchased: false
+      completed: false
     };
     this.setState({
       todoInfo: [...this.state.todoInfo, newTask]
+    })
+  }
+
+  clearTasks = () => {
+    this.setState({
+      todoInfo: this.state.todoInfo.filter(item => !item.purchased)
     })
   }
 
