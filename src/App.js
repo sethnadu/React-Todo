@@ -17,6 +17,7 @@ class App extends React.Component {
     super();
     this.state = {
       todoInfo: todoListArray
+     
     };
 
   }
@@ -54,14 +55,28 @@ class App extends React.Component {
   }
 
   findTask = task => {
+    // console.log(this.state.todoInfo)
+    // const todoInfoCopy = [...this.state.todoInfo]
+    // const oldTodo = this.state.todoInfo.filter(item => item.task === task)
+    // console.log(oldTodo)
+    // console.log(todoInfoCopy)
+    // console.log(this.state.todoInfo)
     this.setState({
+          // todoInfo: oldTodo
       todoInfo: this.state.todoInfo.filter(item => {
-        if (item.task === task) {
-          return item.task
-        } else if (!task) {
-          return {...this.state.todoInfo}
-        }
+        return item.task === task
+        // if (item.task === task) {
+        //   return item
+        // } else if (!task) {
+        //   return this.state.todoInfo
+        // }
+      
       }) 
+      // if (oldTodo) {
+      //   return oldTodo.item
+      // } else if (!oldTodo) {
+      //   return todoInfoCopy
+      // }
     })
   }
 
