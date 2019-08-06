@@ -1,0 +1,119 @@
+
+.todo {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    border: 2px solid black;
+    width: 450px;
+    padding: 20px;
+    background-color: #c5cad1;
+    
+    
+
+    .mainTitle {
+        font-size: 2.4rem;
+        color: #8d0901;
+    }
+
+    .taskDiv {
+      width: 340px;
+      margin: auto;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .task {
+        width: 100px;
+        background-color: #8d0901;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px black;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 5px;
+
+        
+    }
+    .taskcompleted {
+        width: 100px;
+        background-color: #e7ae0f;
+        border: 1px solid black;
+        opacity: .5;
+        color: black;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px black;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 5px;
+        text-decoration: line-through #8d0901;
+        text-decoration-style: double;
+        }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        margin: 10px auto;
+    
+
+        .formInput {
+            width: 120px;
+            border: none;
+            border-bottom: 2px solid #8d0901;
+            margin: 10px;
+           
+        }
+
+        .addButton {
+            width: 150px;
+            background-color: #8d0901;
+            border: 1px solid #8d0901;
+            color: white;
+            box-shadow: 5px 5px 10px black;
+            height: 25px;
+            border-radius: 10px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+    }
+
+    .clearButton {
+        width: 150px;
+        background-color: #e7ae0f;
+        border: 1px solid #e7ae0f;
+        color: white;
+        box-shadow: 5px 5px 10px black;
+        height: 25px;
+        border-radius: 10px;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .searchButton {
+        width: 150px;
+        background-color: #005092;
+        border: 1px solid #005092;
+        color: white;
+        box-shadow: 5px 5px 10px black;
+        height: 25px;
+        border-radius: 10px;
+        padding: 5px 10px;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+
+}
+
+
+
+
+
+
+
